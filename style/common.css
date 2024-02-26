@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+/* 초기화 */
+* {box-sizing: border-box;}
+body, h1 , h2, h3, ul, li, figure, p { margin: 0; padding: 0; }
+li { list-style: none; }
+a { text-decoration: none; color: #000; }
+address { font-style: normal; }
+.hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px; height: 1px;
+    margin: -1px; overflow: hidden;
+}
+
+/* 전체 영역 웹폰트 */
+body { width: 720px; margin:0 auto;
+        background-color: #b8dbf8; }
+@font-face {
+    font-family: 'SokchoBadaBatang';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2402_1@1.0/SokchoBadaBatang.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+h1 { font-family: 'SokchoBadaBatang';}
+h2, h3, li, p, figcaption { font-family: 'Pretendard-Regular'; }
+
+
+/* 헤더 */
+#header { position: relative; height: 275px; color: #fff; text-shadow: 2px 2px 2px #333;
+            background: url(../images/bg.png);}
+#header hgroup { position: absolute; bottom: 30px; right: 30px; }
+#header p { margin-top: 15px; }
+
+/* gnb */
+#gnb { width: 720px; margin: 0 auto;  }
+#gnb ul { display: flex;
+    /* flex-flow: row rap; */
+    /* align-items: baseline; */
+    margin: 0 auto;
+    background-color: #003366;
+}
+#gnb ul li {}
+/* #gnb ul li {w25%} */
+#gnb ul li a {  display: block;
+    width: 180px;
+    color: #fff; line-height: 60px;
+    text-align: center;    
+}
+/* #gnb ul li a {블락요소 w100%} */
+#gnb ul li a:hover { background-color: #fff;
+                    color: #003366;
+                    }
+
+/* content */
+#content { padding: 20px 12px; background-color:#fff; }
+#content h2 { font-size: 24px; }
+#content h3 { margin: 25px 0 15px; font-size: 18px; }
+#content figure { font-size: 14px; padding: 0 0 13px 40px; }
+
+/* footer */
+#footer { /*height: 100px; 반응형으로 만들거면 가변적이기 때문에 고정적인 높이보다 패딩 주는 게 좋다*/
+        padding: 20px 0;
+        margin: 0 auto;
+        background-color: #003300;
+        color: #fff;
+        text-align: center;
+        font-size: 14px; }
+#footer p { padding: 20px 0 15px; }
+#footer address {}
+#footer small {}
